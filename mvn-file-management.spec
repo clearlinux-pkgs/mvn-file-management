@@ -4,10 +4,14 @@
 #
 Name     : mvn-file-management
 Version  : 3.0.0
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.jar
-Source1  : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.pom
+Source1  : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/1.1/file-management-1.1.jar
+Source2  : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/1.1/file-management-1.1.pom
+Source3  : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.jar
+Source4  : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.pom
+Source5  : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -30,10 +34,22 @@ data components for the mvn-file-management package.
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/3.0.0
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/3.0.0
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.1
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.1/file-management-1.1.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.1
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.1/file-management-1.1.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.2.1
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.2.1
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/3.0.0
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/3.0.0
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.pom
 
 
 %files
@@ -41,5 +57,9 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/shared
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.1/file-management-1.1.jar
+/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.1/file-management-1.1.pom
+/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.jar
+/usr/share/java/.m2/repository/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.pom
 /usr/share/java/.m2/repository/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.jar
 /usr/share/java/.m2/repository/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.pom
