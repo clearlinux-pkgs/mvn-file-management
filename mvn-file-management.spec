@@ -4,7 +4,7 @@
 #
 Name     : mvn-file-management
 Version  : 3.0.0
-Release  : 2
+Release  : 3
 URL      : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/3.0.0/file-management-3.0.0.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/shared/file-management/1.1/file-management-1.1.jar
